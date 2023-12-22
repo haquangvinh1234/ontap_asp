@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="BaiThi_OnTap.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder ID="CTHeader" runat="server" ></asp:ContentPlaceHolder>
+  <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+           max-width: 1200px;
+        }
+        .container-content{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .container-content-title{
+            padding: 10px 0 10px 0;
+            text-align: center;
+            font-size: 30px;
+            border: 1px solid #808080;
+        }
+        .content-left{
+            float: left;
+            font-size: 18px;
+            width: 400px;
+            text-align: center;
+            border-right: 1px solid #808080;
+            border-left: 1px solid #808080;
+            height: 450px;
+            padding-top: 20px;
+        }
+        .content-right{
+            float: right;
+            font-size: 18px;
+            width: 800px;
+            text-align: center;
+            border-right: 1px solid #808080;
+            height: 450px;
+            padding-top: 20px;
+        }
+        .clear-float{
+            clear: both;
+        }
+        .content-bottom{
+            border: 1px solid #808080;
+            text-align: center;
+            font-size: 25px;
+            padding: 10px 0 10px 0;
+        }
+        .link{
+            font-size: 20px;
+          
+        }
+        .title-right{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .td{
+            font-size: 20px;
+        }
+        .btn{
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        input[type="text"i]{
+            padding: 3px 5px 3px 5px;
+        }
+        .groupBtn{
+            font-size: 18px;
+            padding: 3px 5px 3px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form id="form1" runat="server">
+        <div class="container-content">
+            <div class="container-content-title">
+                <img src="https://vci.edu.vn/userfiles/images/vendor/logo_congthuong.jpg" alt=""/>
+                <asp:Label ID="lblTitle" runat="server" Text="Trường Cao Đẳng Công Thương Việt Nam"></asp:Label>
+            </div>
+            <div class="content">
+                <div class="content-left">
+                    <div class="link">
+                        <asp:HyperLink ID="hplCapNhat" runat="server"  NavigateUrl="~/ThongTinSinhVien.aspx" Text="Cập nhật sinh viên"></asp:HyperLink>
+                    </div>
+                    <div class="link">
+                        <asp:HyperLink ID="hplTimKiem" runat="server"  NavigateUrl="~/TimKiemSinhVien.aspx" Text="Tìm kiếm sinh viên"></asp:HyperLink>
+                    </div>
+                </div>
+                <div class="content-right">
+                  <asp:ContentPlaceHolder ID="CTContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="clear-float"></div>
+            <div class="content-bottom">
+                <div class="title-end">
+                    <asp:Label ID="lblStudentName" runat="server" Text="Họ tên: Hạ Quang Vinh"></asp:Label>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
